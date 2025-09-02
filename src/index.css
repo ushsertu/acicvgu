@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --acic-primary: #7F1618;
+  --acic-accent: #ECBD1E;
+  --acic-secondary: #BE4A8B;
+  --acic-bg: #FAFAFB;
+  --acic-border: #E7D5D6;
+  --text-strong: #111827;
+  --text-medium: #4B5563;
+  --text-light: #6B7280;
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply font-medium;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-acic-primary hover:bg-opacity-90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-acic-primary focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-text-strong px-4 py-2 rounded-lg font-medium border border-acic-border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-acic-primary focus:ring-offset-2;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-acic-border bg-white focus:outline-none focus:ring-2 focus:ring-acic-primary focus:border-transparent transition-all duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl border border-acic-border shadow-sm p-6;
+  }
+}
